@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tuGerente</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .header .btn {
+      background-color: #d9534f;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .header a {
+      text-decoration: none;
+      color: #000;
+      margin: 0 10px;
+    }
+    .main {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px 20px;
+    }
+    .main .text-section {
+      max-width: 50%;
+    }
+    .main .text-section h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .main .text-section p {
+      margin-bottom: 20px;
+    }
+    .main .text-section .btn-container {
+      display: flex;
+      gap: 10px;
+    }
+    .main .text-section .btn {
+      background-color: #d9534f;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .main .image-section img {
+      max-width: 100%;
+    }
+    .features-section {
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+    }
+    .features-section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1.8em;
+      color: #0056b3;
+    }
+    .features-section .features-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .feature {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px;
+      width: 30%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .feature img {
+      max-width: 100px;
+      margin-bottom: 20px;
+    }
+    .feature h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    .feature p {
+      font-size: 1em;
+      color: #666;
+    }
+    .feature .btn {
+      margin-top: 20px;
+      background-color: #d9534f;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .faq-section {
+      padding: 40px 20px;
+    }
+    .faq-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.8em;
+      color: #0056b3;
+    }
+    .faq {
+      background-color: #eef7ff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px 0;
+    }
+    .faq h3 {
+      font-size: 1.2em;
+      margin: 0;
+    }
+    .faq p {
+      margin: 10px 0 0 0;
+      color: #666;
+    }
+    .video-section {
+      padding: 40px 20px;
+      background-color: #002766;
+      color: #fff;
+      text-align: center;
+    }
+    .video-section h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+    .video-section img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .presentation-section {
+      padding: 40px 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+    .presentation-section h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #0056b3;
+    }
+    .presentation-section img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div>
+      <a href="#"><strong>tuGerente</strong></a>
+      <a href="#">Productos</a>
+      <a href="#">Integraciones</a>
+      <a href="#">Precios</a>
+      <a href="#">Blog</a>
+      <a href="#">Más</a>
+      <!-- Nuevo botón para ir al dashboard -->
+      <a href="dashboard.html" class="btn">Dashboard</a>
+    </div>
+  </header>
+  <main class="main">
+    <div class="text-section">
+      <h1>Ordena y controla tu inventario desde un solo lugar</h1>
+      <p>tuGerente es la herramienta #1 en la gestión de inventario online. Supervisa tu inventario en tiempo real de la manera más simple, donde sea y donde quieras.</p>
+      <div class="btn-container">
+        <button class="btn">Probar gratis</button>
+        <button class="btn">Contactar un asesor</button>
+      </div>
+    </div>
+    <div class="image-section">
+      <img src="features.png" alt="Descripción de las características de la aplicación tuGerente">
+    </div>
+  </main>
+  
+  
+  <!-- Presentation Section -->
+  <section class="presentation-section">
+    <h2>Presentación del Servicio</h2>
+    <img src="/mnt/data/image.png" alt="Imagen de presentación del servicio">
+  </section>
+  
+  <section class="features-section">
+    <h2>Optimiza, racionaliza, crece</h2>
+    <div class="features-container">
+      <div class="feature">
+        <img src="https://th.bing.com/th/id/R.d6d63e1032f817adbdee7fbd1022b158?rik=ofjdoQ%2b7dLty6g&riu=http%3a%2f%2femprendedorestv.pe%2fwp-content%2fuploads%2f2015%2f10%2fidea-de-negociooooo.jpg&ehk=tSxuZojbWWgu7zWbDoMbJqQwpzyYttSQ7ZaoEpnoiR4%3d&risl=&pid=ImgRaw&r=0" alt="Imagen de Su negocio, totalmente empoderado">
+        <h3>Su negocio, totalmente empoderado</h3>
+        <p>No deje que los sistemas anticuados le frenen. Impulse la satisfacción del cliente con un sistema de gestión de clubes completo y moderno.</p>
+        <button class="btn">Ver más</button>
+      </div>
+      <div class="feature">
+        <img src="https://th.bing.com/th/id/R.52ebd718c46c9a4a84ec064ef919b5db?rik=LqHrxesq8ni1%2bA&riu=http%3a%2f%2fst.depositphotos.com%2f1032715%2f3155%2fv%2f950%2fdepositphotos_31555133-stock-illustration-3d-graph-showing-rise-in.jpg&ehk=8eNUYFPxby5C9i7cowIZQgHyTSzwxTSTtHXPHM8Ndq0%3d&risl=&pid=ImgRaw&r=0" alt="Imagen de Aumente sus ingresos en un 35%">
+        <h3>Aumente sus ingresos en un 35%</h3>
+        <p>Maximice su potencial de ingresos con PerfectGym Manager mediante la optimización de las operaciones diarias.</p>
+        <button class="btn">Ver más</button>
+      </div>
+      <div class="feature">
+        <img src="https://th.bing.com/th/id/OIP.SuI0QJiCkh9ndz3tQH66kwHaFM?rs=1&pid=ImgDetMain" alt="Imagen de Mejore retención de socios">
+        <h3>Mejore retención de socios</h3>
+        <p>Ofrezca opciones convenientes de gestión de membresía, ofrezca opciones flexibles de pago y mantenga a los miembros comprometidos.</p>
+        <button class="btn">Ver más</button>
+      </div>
+    </div>
+    <div class="features-container">
+      <div class="feature">
+        <img src="https://th.bing.com/th/id/OIP.NsVr-iWy2qY3nh7dd3FLHAHaFA?rs=1&pid=ImgDetMain" alt="Imagen de Inventario">
+        <h3>Inventario</h3>
+        <p>Revisa tu inventario en tiempo real, coloca mínimos de stock y recibe sugerencias de compras.</p>
+        <button class="btn">Ver más</button>
+      </div>
+      <div class="feature">
+        <img src="https://th.bing.com/th/id/OIP.Ji7cJmBYUl4PpY-Ky8U88AHaE4?w=249&h=180&c=7&r=0&o=5&pid=1.7" alt="Imagen de Análisis y Reportes">
+        <h3>Análisis y Reportes</h3>
+        <p>Conoce si tu negocio está bajo control, conoce tu producto más vendido, tu mejor cliente y la hora pico de ventas.</p>
+        <button class="btn">Ver más</button>
+      </div>
+      <div class="feature">
+        <img src="https://th.bing.com/th/id/OIP.8n7HQv3oWJ0CJ0DHHorukQHaEJ?rs=1&pid=ImgDetMain" alt="Imagen de Punto de Venta">
+        <h3>Punto de Venta</h3>
+        <p>Vende más rápido con nuestro punto de venta enfocado en tus necesidades.</p>
+        <button class="btn">Ver más</button>
+      </div>
+    </div>
+    <div class="features-container">
+      <div class="feature">
+        <img src="https://th.bing.com/th/id/R.2051d46d6d8e0893099335febecd0c6f?rik=IjmuIJ%2f398QGAg&pid=ImgRaw&r=0" alt="Imagen de Gestión de Bodegas">
+        <h3>Gestión de Bodegas</h3>
+        <p>Realiza traspasos entre bodegas, realiza conteos en línea y optimiza tu inventario a nivel general.</p>
+        <button class="btn">Ver más</button>
+      </div>
+      <div class="feature">
+        <img src="https://th.bing.com/th/id/OIP.ES44P2tCBpqJspHv0RsNXQHaHa?rs=1&pid=ImgDetMain" alt="Imagen de Vende en línea">
+        <h3>Vende en línea</h3>
+        <p>Integramos con Shopify, WooCommerce y Mercado Libre.</p>
+        <button class="btn">Ver más</button>
+      </div>
+      <div class="feature">
+        <img src="https://th.bing.com/th/id/OIP.RCWKoy9mWYxr9_MWT7CcCgHaF7?rs=1&pid=ImgDetMain" alt="Imagen de Producción">
+        <h3>Producción</h3>
+        <p>Genera todas tus producciones y transformaciones de productos en tiempo real desde un solo lugar. Controla tu inventario de forma más eficiente.</p>
+        <button class="btn">Ver más</button>
+      </div>
+    </div>
+  </section>
+  
+  <section class="faq-section">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq">
+      <h3>¿Qué es Shopify y cómo funciona?</h3>
+      <p>Shopify es una plataforma de comercio electrónico que permite a cualquier persona crear una tienda en línea y vender productos. Funciona proporcionando herramientas y plantillas para diseñar y gestionar la tienda.</p>
+    </div>
+    <div class="faq">
+      <h3>¿Cuánto cuesta Shopify?</h3>
+      <p>Shopify ofrece varios planes de precios, desde básicos hasta avanzados, dependiendo de las necesidades del negocio. Los precios varían y pueden incluir costos adicionales por aplicaciones y características avanzadas.</p>
+    </div>
+    <div class="faq">
+      <h3>¿Puedo usar mi propio nombre de dominio con Shopify?</h3>
+      <p>Sí, puedes usar tu propio nombre de dominio con Shopify. Puedes comprar un dominio a través de Shopify o conectar uno que ya poseas.</p>
+    </div>
+    <div class="faq">
+      <h3>¿Necesito ser diseñador o desarrollador para usar Shopify?</h3>
+      <p>No, Shopify está diseñado para ser fácil de usar para cualquier persona, sin necesidad de experiencia en diseño o desarrollo. Ofrece plantillas personalizables y herramientas intuitivas.</p>
+    </div>
+  </section>
+  <section class="video-section">
+    <h2>Una muestra de cómo funciona</h2>
+    <img src="video-thumbnail.png" alt="Miniatura del video de demostración">
+    <!-- Aquí puedes agregar el video más tarde -->
+  </section>
+</body>
+</html>
+
+       

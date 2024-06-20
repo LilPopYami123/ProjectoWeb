@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negocios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 20px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+        .card h3 {
+            margin: 0 0 10px;
+            color: #333;
+        }
+        .card p {
+            margin: 0;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.php">Inicio</a>
+        <a href="negocios.php">Negocios</a>
+    </header>
+    <div class="cards-container">
+    </div>
+    <?php
+        // Mostrar errores para depuración
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
+
+        $servername = "localhost";
+        $username = "root"; // Cambia esto si tu configuración de MySQL es diferente
+        $password = ""; // Cambia esto si tu configuración de MySQL es diferente
+        $dbname = "database_name"; // Asegúrate de que este sea el nombre de tu base de datos
+
+        // Crear conexión
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        // Verificar conexión
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql = "SELECT name, owner, occupation, email FROM businesses";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                echo "<div class='card'>";
+                echo "<h3>" . htmlspecialchars($row["name"]) . "</h3>";
+                echo "<p><strong>Propietario:</strong> " . htmlspecialchars($row["owner"]) . "</p>";
+                echo "<p><strong>Ocupación:</strong> " . htmlspecialchars($row["occupation"]) . "</p>";
+                echo "<p><strong>Email:</strong> " . htmlspecialchars($row["email"]) . "</p>";
+                echo "</div>";
+            }
+        } else {
+            echo "<p>No hay resultados</p>";
+        }
+        $conn->close();
+        ?>
+    </div>
+</body>
+</html>

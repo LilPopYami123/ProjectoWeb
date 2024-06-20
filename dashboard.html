@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: white;
+        }
+ 
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+ 
+        .card {
+            background-color: #444;
+            border: none;
+        }
+ 
+        .card-title, .card-text {
+            color: white;
+        }
+ 
+        .bg-dark {
+            background-color: #222 !important;
+        }
+ 
+        .bg-primary {
+            background-color: #007bff !important;
+        }
+ 
+        .bg-success {
+            background-color: #28a745 !important;
+        }
+ 
+        .bg-warning {
+            background-color: #ffc107 !important;
+        }
+ 
+        .bg-danger {
+            background-color: #dc3545 !important;
+        }
+</style>
+</head>
+<body>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-2 bg-dark text-white">
+<h4 class="p-3">AdminLTE</h4>
+<ul class="nav flex-column">
+<li class="nav-item">
+<a class="nav-link text-white" href="#">Dashboard</a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-white" href="#">Charts</a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-white" href="#">UI Elements</a>
+</li>
+<!-- Añade más elementos del menú según sea necesario -->
+</ul>
+</div>
+<div class="col-md-10">
+<div class="row mt-3">
+<div class="col-md-3">
+<div class="card text-white bg-primary mb-3">
+<div class="card-body">
+<h5 class="card-title">150</h5>
+<p class="card-text">Productos</p>
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="card text-white bg-success mb-3">
+<div class="card-body">
+<h5 class="card-title">53%</h5>
+<p class="card-text">Ventas</p>
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="card text-white bg-warning mb-3">
+<div class="card-body">
+<h5 class="card-title">44</h5>
+<p class="card-text">Usuarios registrados</p>
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="card text-white bg-danger mb-3">
+<div class="card-body">
+<h5 class="card-title">65</h5>
+<p class="card-text">Profit</p>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-8">
+<canvas id="salesChart"></canvas>
+</div>
+<div class="col-md-4">
+<canvas id="companiesChart"></canvas>
+</div>
+</div>
+<!-- Añade más contenido aquí según sea necesario -->
+</div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+        // Configuración del gráfico de ventas
+        var ctx = document.getElementById('salesChart').getContext('2d');
+        var salesChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'Sales',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+ 
+        // Configuración del gráfico de empresas
+        var ctx2 = document.getElementById('companiesChart').getContext('2d');
+        var companiesChart = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['CocaCola', 'Sofia', 'Ferreteria Alexis'],
+                datasets: [{
+                    label: 'Revenue',
+                    data: [300, 150, 100],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+</script>
+</body>
+</html>
